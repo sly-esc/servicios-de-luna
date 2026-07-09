@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios de Luna | Atención Integral a tu Salud en CDMX | 24/7</title>
+  <meta name="description" content="Enfermería, consulta médica, fisioterapia y más en un solo contacto. Cuidamos a quien más quieres en casa o en el hospital. Atención 24/7 en CDMX. ¡Contáctanos!" />
+  <meta name="keywords" content="enfermería a domicilio CDMX, atención médica integral, cuidados para adultos mayores, servicios de salud a domicilio, fisioterapia en casa, psicología CDMX, ambulancia CDMX, servicios funerarios, oxígeno a domicilio, laboratorios a domicilio" />
+  <meta name="author" content="Servicios de Luna Atención Integral a su Salud" />
+  <meta property="og:title" content="Servicios de Luna - Atención Integral a tu Salud" />
+  <meta property="og:description" content="Cuidamos a quien más quieres. Enfermería, médicos, psicología y más en un solo contacto. CDMX 24/7." />
+  <meta property="og:image" content="img/hero.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Servicios de Luna Atención Integral a su Salud",
+    "description": "Atención integral para el cuidado de su salud. Enfermería, consulta médica, fisioterapia, psicología y más en CDMX.",
+    "telephone": "+525540036237",
+    "email": "mdluna88@gmail.com",
+    "areaServed": "Ciudad de México",
+    "openingHours": "Mo-Su 00:00-24:00",
+    "url": "https://serviciosdeluna.mx",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "reviewCount": "4"
+    }
+  }
+  </script>
+  <style>
+    /* ============================================================
+       CSS RESET + CUSTOM PROPERTIES
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF;
+      --surface: #F0F4F8;
+      --fg: #0B1A2E;
+      --muted: #1E3A5F;
+      --border: #D4A373;
+      --accent: #2EC4B6;
+      --accent-hover: #26a89c;
+      --gold: #D4A373;
+      --dark: #0B1A2E;
+      --dark-secondary: #1E3A5F;
+      --light: #F0F4F8;
+      --white: #FFFFFF;
+
+      --font-display: 'Montserrat', 'Inter', -apple-system, system-ui, sans-serif;
+      --font-body: 'Inter', 'Open Sans', -apple-system, system-ui, sans-serif;
+      --font-mono: ui-monospace, 'JetBrains Mono', monospace;
+
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 4px 20px rgba(11, 26, 46, 0.08);
+      --shadow-lg: 0 12px 40px rgba(11, 26, 46, 0.12);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1200px;
+      --section-py: clamp(60px, 10vh, 120px);
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font: 16px/1.6 var(--font-body);
+      color: var(--fg);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(16px, 4vw, 40px);
+    }
+    .section-title {
+      font: 700 clamp(28px, 4vw, 40px)/1.15 var(--font-display);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 12px;
+      color: var(--fg);
+    }
+    .section-subtitle {
+      font: 400 16px/1.6 var(--font-body);
+      text-align: center;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      padding: 14px 32px;
+      font: 600 15px/1 var(--font-body);
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      border-radius: var(--radius);
+      padding: 12px 28px;
+      font: 600 15px/1 var(--font-body);
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+    }
+    .btn-secondary:hover {
+      background: var(--white);
+      color: var(--dark);
+    }
+    .ph-img {
+      background: var(--light);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font: 500 14px/1 var(--font-body);
+      min-height: 160px;
+    }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11,26,46,0.06);
+      transition: background var(--transition);
+    }
+    .header.scrolled {
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 2px 20px rgba(11,26,46,0.06);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font: 700 16px/1 var(--font-display);
+      color: var(--fg);
+    }
+    .header-logo img { height: 40px; width: auto; }
+    .header-logo span { display: none; }
+    @media (min-width: 480px) {
+      .header-logo span { display: inline; }
+    }
+    .header-nav {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+    .header-nav a {
+      font: 500 14px/1 var(--font-body);
+      letter-spacing: 0.02em;
+      color: var(--fg);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .header-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+    .header-nav a:hover { color: var(--accent); }
+    .header-nav a:hover::after { width: 100%; }
+    .header-wa {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 10px 20px;
+      font: 600 13px/1 var(--font-body);
+      letter-spacing: 0.02em;
+      transition: background var(--transition);
+    }
+    .header-wa:hover { background: var(--accent-hover); }
+    .header-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+    .header-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--fg);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .header-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .header-toggle.active span:nth-child(2) { opacity: 0; }
+    .header-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    @media (min-width: 900px) {
+      .header-nav { display: flex; }
+      .header-wa { display: inline-flex; }
+      .header-toggle { display: none; }
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: var(--white);
+      padding: 100px 32px 32px;
+      box-shadow: -4px 0 30px rgba(11,26,46,0.1);
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .mobile-menu.open { right: 0; }
+    .mobile-menu a {
+      font: 600 18px/1 var(--font-body);
+      color: var(--fg);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--light);
+    }
+    .mobile-menu .mobile-wa {
+      margin-top: auto;
+      background: var(--accent);
+      color: var(--white);
+      text-align: center;
+      padding: 16px;
+      border-radius: var(--radius);
+      font: 600 15px/1 var(--font-body);
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--dark);
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    .hero-bg .fallback {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,26,46,0.85) 0%, rgba(11,26,46,0.65) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      padding: clamp(40px, 8vw, 100px) 0;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(46,196,182,0.15);
+      border: 1px solid rgba(46,196,182,0.3);
+      color: var(--accent);
+      font: 600 12px/1 var(--font-body);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .hero h1 {
+      font: 800 clamp(32px, 5vw, 56px)/1.1 var(--font-display);
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font: 400 clamp(15px, 2vw, 18px)/1.6 var(--font-body);
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ============================================================
+       PROPUESTA DE VALOR
+       ============================================================ */
+    .value-prop { padding: var(--section-py) 0; background: var(--bg); }
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 576px) { .value-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 992px) { .value-grid { grid-template-columns: repeat(4, 1fr); } }
+    .value-card {
+      background: var(--white);
+      border: 1px solid rgba(11,26,46,0.06);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .value-card .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .value-card .icon svg { width: 28px; height: 28px; color: var(--accent); }
+    .value-card h3 {
+      font: 700 18px/1.3 var(--font-display);
+      margin-bottom: 10px;
+      color: var(--fg);
+    }
+    .value-card p {
+      font: 400 14px/1.6 var(--font-body);
+      color: var(--muted);
+    }
+    .value-cta { text-align: center; }
+
+    /* ============================================================
+       SERVICIOS
+       ============================================================ */
+    .servicios { padding: var(--section-py) 0; background: var(--light); }
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 576px) { .servicios-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 992px) { .servicios-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1200px) { .servicios-grid { grid-template-columns: repeat(4, 1fr); } }
+    .servicio-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .servicio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .servicio-card.featured {
+      border: 2px solid var(--gold);
+      position: relative;
+    }
+    @media (min-width: 576px) {
+      .servicio-card.featured { grid-column: span 1; }
+    }
+    @media (min-width: 992px) {
+      .servicio-card.featured { grid-column: span 2; grid-row: span 1; }
+    }
+    .servicio-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--gold);
+      color: var(--white);
+      font: 700 11px/1 var(--font-body);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      z-index: 2;
+    }
+    .servicio-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: var(--light);
+    }
+    .servicio-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, var(--dark-secondary), var(--dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font: 600 14px/1 var(--font-display);
+      letter-spacing: 0.02em;
+      text-align: center;
+      padding: 16px;
+    }
+    .servicio-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .servicio-body h3 {
+      font: 700 16px/1.3 var(--font-display);
+      margin-bottom: 8px;
+      color: var(--fg);
+    }
+    .servicio-body p {
+      font: 400 13px/1.5 var(--font-body);
+      color: var(--muted);
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .servicio-body .btn-servicio {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 10px 20px;
+      font: 600 13px/1 var(--font-body);
+      cursor: pointer;
+      transition: background var(--transition);
+      align-self: flex-start;
+    }
+    .servicio-body .btn-servicio:hover { background: var(--accent-hover); }
+
+    /* ============================================================
+       SERVICIO ESTRELLA
+       ============================================================ */
+    .star-service {
+      padding: var(--section-py) 0;
+      background: var(--dark);
+      color: var(--white);
+    }
+    .star-service-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .star-service-inner { grid-template-columns: 1fr 1fr; } }
+    .star-service img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      max-height: 400px;
+    }
+    .star-service .ph-img-block {
+      width: 100%;
+      min-height: 300px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--dark-secondary), var(--dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.4);
+      font: 500 16px/1 var(--font-body);
+    }
+    .star-service h2 {
+      font: 700 clamp(26px, 4vw, 36px)/1.2 var(--font-display);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .star-service p {
+      font: 400 15px/1.7 var(--font-body);
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 24px;
+    }
+    .star-service .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .star-service .benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font: 400 14px/1.5 var(--font-body);
+      color: rgba(255,255,255,0.85);
+    }
+    .star-service .benefits li svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .star-testimonial {
+      margin-top: 28px;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--accent);
+    }
+    .star-testimonial p {
+      font: 400 14px/1.6 var(--font-body);
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 8px;
+    }
+    .star-testimonial cite {
+      font: 500 13px/1 var(--font-body);
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    /* ============================================================
+       COBERTURA
+       ============================================================ */
+    .cobertura { padding: var(--section-py) 0; background: var(--bg); }
+    .cobertura-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .cobertura-inner { grid-template-columns: 1fr 1fr; } }
+    .cobertura-text h2 {
+      font: 700 clamp(26px, 4vw, 36px)/1.2 var(--font-display);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .cobertura-text p {
+      font: 400 15px/1.7 var(--font-body);
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .cobertura-map {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      min-height: 300px;
+      justify-content: center;
+    }
+    .cobertura-map svg { max-width: 100%; height: auto; }
+
+    /* ============================================================
+       TESTIMONIOS
+       ============================================================ */
+    .testimonios { padding: var(--section-py) 0; background: var(--light); }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 576px) { .testimonios-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 992px) { .testimonios-grid { grid-template-columns: repeat(4, 1fr); } }
+    .testimonio-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      border: 1px solid rgba(11,26,46,0.06);
+    }
+    .testimonio-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      border: 2px solid var(--accent);
+    }
+    .testimonio-avatar svg {
+      width: 28px;
+      height: 28px;
+      color: var(--dark-secondary);
+    }
+    .testimonio-card h4 {
+      font: 700 15px/1.3 var(--font-display);
+      color: var(--fg);
+      margin-bottom: 2px;
+    }
+    .testimonio-card .relation {
+      font: 400 12px/1 var(--font-body);
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .testimonio-card blockquote {
+      font: 400 14px/1.6 var(--font-body);
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 14px;
+    }
+    .testimonio-stars {
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+    }
+    .testimonio-stars svg { width: 16px; height: 16px; color: var(--gold); }
+
+    /* ============================================================
+       SOBRE NOSOTROS
+       ============================================================ */
+    .about { padding: var(--section-py) 0; background: var(--bg); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .about-inner { grid-template-columns: 1fr 1fr; } }
+    .about img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      max-height: 400px;
+    }
+    .about .ph-img-block {
+      width: 100%;
+      min-height: 300px;
+      border-radius: var(--radius);
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font: 500 16px/1 var(--font-body);
+    }
+    .about-text h2 {
+      font: 700 clamp(26px, 4vw, 36px)/1.2 var(--font-display);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      font: 400 15px/1.7 var(--font-body);
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .about-text .frase {
+      font: 600 15px/1.6 var(--font-body);
+      color: var(--dark-secondary);
+      font-style: italic;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: var(--light);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent);
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (min-width: 480px) { .about-stats { grid-template-columns: repeat(4, 1fr); } }
+    .stat {
+      text-align: center;
+    }
+    .stat-number {
+      font: 800 28px/1 var(--font-display);
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font: 400 12px/1.3 var(--font-body);
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       FAQS
+       ============================================================ */
+    .faqs { padding: var(--section-py) 0; background: var(--light); }
+    .faqs-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(11,26,46,0.06);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font: 600 15px/1.3 var(--font-body);
+      color: var(--fg);
+      text-align: left;
+      transition: background var(--transition);
+    }
+    .faq-question:hover { background: rgba(46,196,182,0.03); }
+    .faq-question svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: var(--accent);
+      transition: transform var(--transition);
+    }
+    .faq-item.open .faq-question svg { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-answer p {
+      padding: 0 24px 18px;
+      font: 400 14px/1.6 var(--font-body);
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       CONTACTO
+       ============================================================ */
+    .contacto { padding: var(--section-py) 0; background: var(--bg); }
+    .contacto-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (min-width: 768px) { .contacto-inner { grid-template-columns: 1fr 1fr; } }
+    .contacto-form { background: var(--white); }
+    .contacto-form .form-group {
+      margin-bottom: 18px;
+    }
+    .contacto-form label {
+      display: block;
+      font: 500 13px/1 var(--font-body);
+      color: var(--fg);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .contacto-form input,
+    .contacto-form select,
+    .contacto-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(11,26,46,0.12);
+      border-radius: var(--radius-sm);
+      font: 400 14px/1.4 var(--font-body);
+      color: var(--fg);
+      background: var(--white);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .contacto-form input:focus,
+    .contacto-form select:focus,
+    .contacto-form textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(46,196,182,0.1);
+    }
+    .contacto-form textarea { min-height: 100px; resize: vertical; }
+    .contacto-form .btn-primary { width: 100%; justify-content: center; margin-top: 8px; }
+    .contacto-form .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .contacto-form .form-success.show { display: block; }
+    .contacto-form .form-success svg {
+      width: 48px;
+      height: 48px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .contacto-form .form-success h3 {
+      font: 700 20px/1.3 var(--font-display);
+      margin-bottom: 8px;
+    }
+    .contacto-form .form-success p {
+      font: 400 14px/1.5 var(--font-body);
+      color: var(--muted);
+    }
+    .contacto-form .form-error {
+      color: #d32f2f;
+      font: 400 12px/1 var(--font-body);
+      margin-top: 4px;
+      display: none;
+    }
+    .contacto-form .form-error.show { display: block; }
+    .contacto-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contacto-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contacto-info-item svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contacto-info-item h4 {
+      font: 600 15px/1.3 var(--font-body);
+      color: var(--fg);
+      margin-bottom: 4px;
+    }
+    .contacto-info-item p, .contacto-info-item a {
+      font: 400 14px/1.5 var(--font-body);
+      color: var(--muted);
+    }
+    .contacto-info-item a:hover { color: var(--accent); }
+    .contacto-info-item img {
+      width: 100%;
+      border-radius: var(--radius);
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .contacto-privacy {
+      font: 400 12px/1.4 var(--font-body);
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 60px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 576px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+    .footer-brand p {
+      font: 400 14px/1.6 var(--font-body);
+      color: rgba(255,255,255,0.6);
+      margin-top: 12px;
+      max-width: 320px;
+    }
+    .footer-brand .eslogan {
+      font: 500 14px/1.4 var(--font-body);
+      color: var(--accent);
+      margin-top: 6px;
+    }
+    .footer h4 {
+      font: 700 14px/1 var(--font-display);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font: 400 14px/1 var(--font-body);
+      color: rgba(255,255,255,0.7);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition);
+    }
+    .footer-social a:hover { background: var(--accent); }
+    .footer-social a svg { width: 18px; height: 18px; color: var(--white); }
+    .footer-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 12px 24px;
+      font: 600 14px/1 var(--font-body);
+      transition: background var(--transition);
+    }
+    .footer-wa:hover { background: var(--accent-hover); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      text-align: center;
+      font: 400 13px/1.4 var(--font-body);
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-brand img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 8px;
+    }
+
+    /* ============================================================
+       WHATSAPP FLOTANTE
+       ============================================================ */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(46,196,182,0.4);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(46,196,182,0.5);
+    }
+    .wa-float svg {
+      width: 28px;
+      height: 28px;
+      color: white;
+    }
+
+    /* ============================================================
+       ANIMACIONES — SCROLL REVEAL
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       SKIP TO CONTENT
+       ============================================================ */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      z-index: 10000;
+      background: var(--accent);
+      color: var(--white);
+      padding: 12px 20px;
+      font: 600 14px/1 var(--font-body);
+    }
+    .skip-link:focus { top: 0; }
+  </style>
+</head>
+<body>
+
+  <a href="#hero" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="header" id="header" data-od-id="header">
+    <div class="container header-inner">
+      <a href="#" class="header-logo" data-od-id="header-logo">
+        <img src="img/logo.jpg" alt="Servicios de Luna logo" width="40" height="40" style="background:var(--surface);border-radius:6px" />
+        <span>Servicios de Luna</span>
+      </a>
+      <nav class="header-nav" data-od-id="header-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="header-wa" data-od-id="header-wa">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Contactar por WhatsApp
+      </a>
+      <button class="header-toggle" id="menuToggle" aria-label="Abrir menú" data-od-id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" data-od-id="mobile-menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="mobile-wa">
+      Contactar por WhatsApp
+    </a>
+  </nav>
+
+  <main>
+    <!-- ============================================================
+       HERO
+       ============================================================ -->
+    <section class="hero" id="hero" data-od-id="hero">
+      <div class="hero-bg">
+        <img src="img/hero.png" alt="Enfermera profesional cuidando adulto mayor en hogar cálido - Servicios de Luna" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <div class="fallback" style="display:none"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badges" data-od-id="hero-badges">
+            <span class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Atención 24/7
+            </span>
+            <span class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cobertura CDMX
+            </span>
+          </div>
+          <h1 data-od-id="hero-title">Cuidamos a quien más quieres. En casa o en el hospital.</h1>
+          <p data-od-id="hero-subtitle">Atención integral para el cuidado de tu salud con un solo contacto: enfermería a domicilio, consulta médica, fisioterapia, psicología, laboratorios y más. Estamos contigo 24/7 en toda la CDMX.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn-primary" data-od-id="hero-cta-primary">
+              Solicitar atención ahora
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+            <a href="#servicios" class="btn-secondary" data-od-id="hero-cta-secondary">
+              Conoce nuestros servicios
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       PROPUESTA DE VALOR
+       ============================================================ -->
+    <section class="value-prop" id="valor" data-od-id="value-prop">
+      <div class="container">
+        <h2 class="section-title reveal">La salud integral que tu familia merece</h2>
+        <p class="section-subtitle reveal">Somos el único ecosistema de salud en CDMX que te acompaña en cada etapa. Un solo contacto, todas las soluciones.</p>
+        <div class="value-grid">
+          <div class="value-card reveal reveal-delay-1" data-od-id="value-card-247">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Atención 24/7</h3>
+            <p>Disponibilidad inmediata para urgencias y cuidados. La salud no espera, nosotros tampoco.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-2" data-od-id="value-card-equipo">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Equipo multidisciplinario certificado</h3>
+            <p>Enfermeras, médicos, psicólogos, nutriólogos y fisioterapeutas trabajando en conjunto para tu bienestar.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-3" data-od-id="value-card-cobertura">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Cobertura CDMX con respuesta rápida</h3>
+            <p>Llegamos a donde nos necesites en el menor tiempo posible. Sin largas esperas ni derivaciones.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-4" data-od-id="value-card-acompanamiento">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Acompañamiento integral</h3>
+            <p>Desde el cuidado en casa hasta servicios funerarios, con empatía en cada etapa. Contigo siempre.</p>
+          </div>
+        </div>
+        <div class="value-cta reveal">
+          <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn-primary" data-od-id="value-cta">
+            Comienza ahora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SERVICIOS
+       ============================================================ -->
+    <section class="servicios" id="servicios" data-od-id="servicios">
+      <div class="container">
+        <h2 class="section-title reveal">Todo lo que necesitas, en un solo lugar</h2>
+        <p class="section-subtitle reveal">Diez servicios especializados para cuidar tu salud y la de los tuyos. Todos con el mismo estándar de calidad y calidez humana.</p>
+        <div class="servicios-grid">
+
+          <!-- 1. Enfermería a domicilio (estrella) -->
+          <div class="servicio-card featured reveal reveal-delay-1" data-od-id="servicio-card-enfermeria">
+            <span class="servicio-badge">Más solicitado</span>
+            <img src="img/enfermeria.png" alt="Servicio de enfermería a domicilio en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Enfermería a domicilio</div>
+            <div class="servicio-body">
+              <h3>Enfermería a domicilio</h3>
+              <p>Cuidado profesional en tu hogar. Personal certificado, monitoreo constante y acompañamiento médico integral.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Me%20interesa%20contratar%20el%20servicio%20de%20enfermer%C3%ADa%20a%20domicilio." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 2. Consulta médica -->
+          <div class="servicio-card reveal reveal-delay-2" data-od-id="servicio-card-consulta">
+            <img src="img/consulta-medica.png" alt="Consulta médica a domicilio en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Consulta médica</div>
+            <div class="servicio-body">
+              <h3>Consulta médica a domicilio</h3>
+              <p>Médicos generales y especialistas que van a tu casa. Diagnóstico oportuno sin salir de tu hogar.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20agendar%20una%20consulta%20m%C3%A9dica%20a%20domicilio." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 3. Fisioterapia -->
+          <div class="servicio-card reveal reveal-delay-3" data-od-id="servicio-card-fisioterapia">
+            <img src="img/fisioterapia.png" alt="Fisioterapia a domicilio en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Fisioterapia</div>
+            <div class="servicio-body">
+              <h3>Fisioterapia</h3>
+              <p>Rehabilitación y terapia física con especialistas en movimiento. Recupera tu calidad de vida.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Necesito%20informaci%C3%B3n%20sobre%20fisioterapia." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 4. Psicología -->
+          <div class="servicio-card reveal reveal-delay-4" data-od-id="servicio-card-psicologia">
+            <img src="img/psicologia.png" alt="Psicología en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Psicología</div>
+            <div class="servicio-body">
+              <h3>Psicología</h3>
+              <p>Acompañamiento emocional y terapéutico para ti y tu familia. Salud mental es salud integral.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Me%20interesa%20el%20servicio%20de%20psicolog%C3%ADa." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 5. Nutriólogo -->
+          <div class="servicio-card reveal reveal-delay-1" data-od-id="servicio-card-nutriologo">
+            <img src="img/nutriologo.png" alt="Nutriólogo en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Nutriólogo</div>
+            <div class="servicio-body">
+              <h3>Nutriólogo</h3>
+              <p>Planes nutricionales personalizados para mejorar tu bienestar y prevenir enfermedades.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Quiero%20informaci%C3%B3n%20sobre%20nutrici%C3%B3n." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 6. Laboratorios -->
+          <div class="servicio-card reveal reveal-delay-2" data-od-id="servicio-card-laboratorios">
+            <img src="img/laboratorios.png" alt="Laboratorios a domicilio en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Laboratorios</div>
+            <div class="servicio-body">
+              <h3>Laboratorios y rayos X</h3>
+              <p>Estudios clínicos y de imagen con equipos modernos. Resultados rápidos y confiables.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Necesito%20estudios%20de%20laboratorio%20a%20domicilio." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 7. Oxígeno -->
+          <div class="servicio-card reveal reveal-delay-3" data-od-id="servicio-card-oxigeno">
+            <img src="img/oxigeno.png" alt="Venta y renta de oxígeno en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Oxígeno</div>
+            <div class="servicio-body">
+              <h3>Venta y renta de oxígeno</h3>
+              <p>Concentradores y tanques de oxígeno de alta calidad. Entrega inmediata en CDMX.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Busco%20renta%2Fventa%20de%20ox%C3%ADgeno." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 8. Ambulancia -->
+          <div class="servicio-card reveal reveal-delay-4" data-od-id="servicio-card-ambulancia">
+            <img src="img/ambulancias.png" alt="Traslados en ambulancia en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Ambulancia</div>
+            <div class="servicio-body">
+              <h3>Traslados en ambulancia</h3>
+              <p>Ambulancias equipadas con personal paramédico. Traslados seguros y oportunos.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Necesito%20un%20traslado%20en%20ambulancia." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 9. Servicios funerarios -->
+          <div class="servicio-card reveal reveal-delay-1" data-od-id="servicio-card-funerarios">
+            <img src="img/funerarios.png" alt="Servicios funerarios en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Servicios funerarios</div>
+            <div class="servicio-body">
+              <h3>Servicios funerarios</h3>
+              <p>Acompañamiento integral en el momento más difícil. Con empatía y respeto.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Requiero%20informaci%C3%B3n%20sobre%20servicios%20funerarios." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+          <!-- 10. Radiografías -->
+          <div class="servicio-card reveal reveal-delay-2" data-od-id="servicio-card-radiografias">
+            <img src="img/radiografias.png" alt="Radiografías en CDMX" class="servicio-img" loading="lazy" onerror="this.classList.add('errored');this.nextElementSibling.style.display='flex'" />
+            <div class="servicio-img-placeholder" style="display:none">Radiografías</div>
+            <div class="servicio-body">
+              <h3>Radiografías</h3>
+              <p>Estudios radiológicos precisos con tecnología de punta. Diagnóstico certero.</p>
+              <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Necesito%20agendar%20radiograf%C3%ADas." target="_blank" rel="noopener" class="btn-servicio">Solicitar información</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SERVICIO ESTRELLA — ENFERMERÍA
+       ============================================================ -->
+    <section class="star-service" id="servicio-estrella" data-od-id="servicio-estrella">
+      <div class="container">
+        <div class="star-service-inner">
+          <div>
+            <img src="img/enfermeria.png" alt="Servicio de enfermería a domicilio en CDMX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="ph-img-block" style="display:none">Enfermería a domicilio</div>
+          </div>
+          <div>
+            <h2 data-od-id="star-title">Enfermería a domicilio: el cuidado profesional que tu ser querido merece</h2>
+            <p>Cuando un familiar necesita cuidados especializados, la confianza y la calidad no son negociables. Nuestro equipo de enfermeras certificadas brinda atención personalizada en tu hogar, con monitoreo 24/7 y coordinación con médicos, nutriólogos y fisioterapeutas. Todo en un solo contacto.</p>
+            <ul class="benefits" data-od-id="star-benefits">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Personal certificado y con amplia experiencia.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Atención personalizada según las necesidades del paciente.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Monitoreo constante y reporte a la familia.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Coordinación con especialistas sin que te preocupes por nada.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Disponibilidad inmediata en CDMX.
+              </li>
+            </ul>
+            <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Me%20interesa%20contratar%20el%20servicio%20de%20enfermer%C3%ADa%20a%20domicilio." target="_blank" rel="noopener" class="btn-primary" data-od-id="star-cta">
+              Contratar enfermería ahora
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+            <div class="star-testimonial" data-od-id="star-testimonial">
+              <p>"Mi mamá recibió cuidados increíbles. No solo mejoró su salud, sino que recuperó la alegría. Estamos muy agradecidos."</p>
+              <cite>— Ana R., hija de paciente</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       COBERTURA
+       ============================================================ -->
+    <section class="cobertura" id="cobertura" data-od-id="cobertura">
+      <div class="container">
+        <div class="cobertura-inner">
+          <div class="cobertura-text reveal">
+            <h2>Estamos donde nos necesites</h2>
+            <p>Cobertura en toda la Ciudad de México, con respuesta rápida y atención 24/7. Sin largas esperas. Sin derivaciones. Un solo contacto y llegamos a tu hogar, hospital o donde nos necesites.</p>
+            <a href="tel:+525540036237" class="btn-primary" data-od-id="cobertura-cta">
+              Llama ahora
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+          <div class="cobertura-map reveal reveal-delay-2" data-od-id="cobertura-map">
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" rx="12" fill="#F0F4F8"/>
+              <path d="M200 40c-60 0-110 40-120 95s20 80 50 105c20 17 45 28 70 28s50-11 70-28c30-25 60-50 50-105S260 40 200 40z" fill="#1E3A5F" opacity="0.15"/>
+              <path d="M200 50c-50 0-92 34-100 80s15 68 42 89c17 14 37 23 58 23s41-9 58-23c27-21 50-43 42-89S250 50 200 50z" fill="#1E3A5F" opacity="0.2"/>
+              <path d="M200 65c-38 0-70 26-76 60s12 50 32 65c12 10 27 17 44 17s32-7 44-17c20-15 25-31 32-65S238 65 200 65z" fill="#1E3A5F" opacity="0.15"/>
+              <circle cx="200" cy="120" r="40" fill="#1E3A5F" opacity="0.3"/>
+              <circle cx="200" cy="120" r="25" fill="#1E3A5F" opacity="0.4"/>
+              <path d="M200 95v50M175 120h50" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="200" cy="120" r="4" fill="#2EC4B6"/>
+              <circle cx="140" cy="90" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <circle cx="260" cy="100" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <circle cx="160" cy="150" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <circle cx="240" cy="145" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <circle cx="120" cy="125" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <circle cx="280" cy="130" r="3" fill="#2EC4B6" opacity="0.6"/>
+              <text x="200" y="50" text-anchor="middle" fill="#1E3A5F" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="1">CDMX</text>
+              <text x="200" y="68" text-anchor="middle" fill="#1E3A5F" font-family="Inter, sans-serif" font-size="10" opacity="0.7">Cobertura total</text>
+            </svg>
+            <p style="font:400 14px/1.4 var(--font-body);color:var(--muted);text-align:center;max-width:280px">Respuesta rápida en toda la Ciudad de México. Un solo contacto y llegamos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       TESTIMONIOS
+       ============================================================ -->
+    <section class="testimonios" id="testimonios" data-od-id="testimonios">
+      <div class="container">
+        <h2 class="section-title reveal">Lo que dicen quienes confían en nosotros</h2>
+        <p class="section-subtitle reveal">Historias reales de familias que encontraron en Servicios de Luna el apoyo que necesitaban.</p>
+        <div class="testimonios-grid">
+          <div class="testimonio-card reveal reveal-delay-1" data-od-id="testimonio-1">
+            <div class="testimonio-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Carlos M.</h4>
+            <p class="relation">Hijo de paciente</p>
+            <blockquote>"Mi papá necesitaba cuidados después de su operación. En Servicios de Luna encontramos enfermeras increíbles y todo el apoyo médico. Fue un alivio enorme."</blockquote>
+            <div class="testimonio-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+          <div class="testimonio-card reveal reveal-delay-2" data-od-id="testimonio-2">
+            <div class="testimonio-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Laura V.</h4>
+            <p class="relation">Familiar</p>
+            <blockquote>"La psicóloga nos ayudó a mi familia a procesar el duelo. No sabía que también ofrecían ese servicio. Fue un regalo en medio del dolor."</blockquote>
+            <div class="testimonio-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+          <div class="testimonio-card reveal reveal-delay-3" data-od-id="testimonio-3">
+            <div class="testimonio-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Roberto G.</h4>
+            <p class="relation">Nieto</p>
+            <blockquote>"Contraté fisioterapia para mi abuela. En dos meses recuperó movilidad. El equipo es maravilloso y muy profesional."</blockquote>
+            <div class="testimonio-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+          <div class="testimonio-card reveal reveal-delay-4" data-od-id="testimonio-4">
+            <div class="testimonio-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Patricia S.</h4>
+            <p class="relation">Usuaria</p>
+            <blockquote>"La ambulancia llegó en minutos. El personal fue muy atento y nos acompañó en todo el proceso. Confianza total."</blockquote>
+            <div class="testimonio-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px" class="reveal">
+          <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Quiero%20compartir%20mi%20experiencia." target="_blank" rel="noopener" class="btn-primary" data-od-id="testimonios-cta">
+            Comparte tu experiencia
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SOBRE NOSOTROS
+       ============================================================ -->
+    <section class="about" id="nosotros" data-od-id="nosotros">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-text reveal">
+            <h2>Un equipo humano, una misión: cuidar tu salud</h2>
+            <p>Servicios de Luna nació de una convicción: la salud no es solo curar enfermedades, es acompañar, entender y cuidar a las personas en su totalidad. Somos un equipo multidisciplinario de profesionales de la salud que decidió romper las barreras del sistema tradicional.</p>
+            <p>No queremos que tengas que buscar en 10 lugares distintos para resolver una necesidad. Queremos que un solo contacto te conecte con todo lo que necesitas: enfermería, médicos, psicólogos, fisioterapeutas, nutriólogos, laboratorios, oxígeno, ambulancias y hasta acompañamiento funerario.</p>
+            <div class="frase">"Brindamos cuidados de calidad a usuarios en Unidad hospitalaria o en domicilio."</div>
+            <div class="about-stats" data-od-id="about-stats">
+              <div class="stat">
+                <div class="stat-number">+10</div>
+                <div class="stat-label">Años cuidando familias</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">+500</div>
+                <div class="stat-label">Pacientes atendidos</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">+50</div>
+                <div class="stat-label">Profesionales en el equipo</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Atención los 365 días</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <img src="img/equipo.png" alt="Equipo médico multidisciplinario de Servicios de Luna" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="ph-img-block" style="display:none">Equipo Servicios de Luna</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       FAQS
+       ============================================================ -->
+    <section class="faqs" id="faq" data-od-id="faq">
+      <div class="container">
+        <h2 class="section-title reveal">Resolvemos tus dudas</h2>
+        <p class="section-subtitle reveal">Respuestas claras para que puedas tomar la mejor decisión.</p>
+        <div class="faqs-list">
+          <div class="faq-item reveal" data-od-id="faq-1">
+            <button class="faq-question" aria-expanded="false">
+              ¿Cómo contrato el servicio?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Solo tienes que contactarnos por WhatsApp o llenar el formulario. Te atenderemos en menos de 15 minutos para coordinar el servicio que necesitas.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-2">
+            <button class="faq-question" aria-expanded="false">
+              ¿Cuentan con personal certificado?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Sí. Todos nuestros profesionales cuentan con cédula profesional y amplia experiencia en el área. Realizamos procesos rigurosos de selección.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-3">
+            <button class="faq-question" aria-expanded="false">
+              ¿Atienden emergencias?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Sí. Nuestra línea de atención está disponible 24/7 para emergencias y urgencias de salud.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-4">
+            <button class="faq-question" aria-expanded="false">
+              ¿Cuál es la cobertura?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Cubrimos toda la Ciudad de México, con tiempos de respuesta ágiles.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-5">
+            <button class="faq-question" aria-expanded="false">
+              ¿Puedo combinar varios servicios?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Por supuesto. Somos un ecosistema integral. Puedes contratar enfermería, psicología y nutrición al mismo tiempo, todo coordinado.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-6">
+            <button class="faq-question" aria-expanded="false">
+              ¿Aceptan seguros médicos?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Consulta con nuestro equipo. Trabajamos con varios seguros médicos. Infórmate sin compromiso.</p></div>
+          </div>
+          <div class="faq-item reveal" data-od-id="faq-7">
+            <button class="faq-question" aria-expanded="false">
+              ¿Cómo funciona el servicio funerario?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p>Brindamos acompañamiento integral y respetuoso. Coordinamos todos los trámites y procesos para que tú puedas estar con tu familia.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       CONTACTO
+       ============================================================ -->
+    <section class="contacto" id="contacto" data-od-id="contacto">
+      <div class="container">
+        <h2 class="section-title reveal">Hablemos. Tu salud es nuestra prioridad</h2>
+        <p class="section-subtitle reveal">Déjanos tus datos y te contactamos en menos de 15 minutos.</p>
+        <div class="contacto-inner">
+          <div class="contacto-form reveal" data-od-id="contacto-form">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+                <div class="form-error" id="error-nombre">Por favor ingresa tu nombre.</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+                <div class="form-error" id="error-email">Por favor ingresa un correo válido.</div>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="+52 55 1234 5678" />
+                <div class="form-error" id="error-telefono">Por favor ingresa tu teléfono.</div>
+              </div>
+              <div class="form-group">
+                <label for="servicio">Servicio que necesita *</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="Enfermería a domicilio">Enfermería a domicilio</option>
+                  <option value="Consulta médica a domicilio">Consulta médica a domicilio</option>
+                  <option value="Fisioterapia">Fisioterapia</option>
+                  <option value="Psicología">Psicología</option>
+                  <option value="Nutriólogo">Nutriólogo</option>
+                  <option value="Laboratorios y rayos X">Laboratorios y rayos X</option>
+                  <option value="Venta y renta de oxígeno">Venta y renta de oxígeno</option>
+                  <option value="Traslados en ambulancia">Traslados en ambulancia</option>
+                  <option value="Servicios funerarios">Servicios funerarios</option>
+                  <option value="Radiografías">Radiografías</option>
+                </select>
+                <div class="form-error" id="error-servicio">Por favor selecciona un servicio.</div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje (opcional)</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary" data-od-id="contacto-submit">Enviar solicitud</button>
+              <p class="contacto-privacy">Tus datos están seguros. No compartimos información con terceros.</p>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <h3>¡Gracias!</h3>
+              <p>Te contactaremos en menos de 15 minutos.</p>
+            </div>
+          </div>
+          <div class="contacto-info reveal reveal-delay-2">
+            <div class="contacto-info-item" data-od-id="contacto-whatsapp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/5215540036237" target="_blank" rel="noopener">5540036237</a>
+                <p style="font-size:12px;color:var(--muted);margin-top:4px">Respuesta en menos de 15 minutos</p>
+              </div>
+            </div>
+            <div class="contacto-info-item" data-od-id="contacto-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <h4>Correo electrónico</h4>
+                <a href="mailto:mdluna88@gmail.com">mdluna88@gmail.com</a>
+              </div>
+            </div>
+            <div class="contacto-info-item" data-od-id="contacto-redes">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <div>
+                <h4>Redes sociales</h4>
+                <p><a href="https://www.facebook.com/share/1BnyyGabRZ/" target="_blank" rel="noopener" style="color:var(--accent)">Facebook</a> · <a href="https://www.instagram.com/mauriciodlunav" target="_blank" rel="noopener" style="color:var(--accent)">Instagram @mauriciodlunav</a></p>
+              </div>
+            </div>
+            <img src="img/contacto.png" alt="Contacto Servicios de Luna" loading="lazy" onerror="this.style.display='none'" style="border-radius:var(--radius);width:100%;max-height:180px;object-fit:cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer class="footer" data-od-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.jpg" alt="Servicios de Luna" width="44" height="44" style="background:var(--surface);border-radius:6px" />
+          <p>Servicios de Luna Atención Integral a su Salud</p>
+          <p class="eslogan">"Atención Integral para el cuidado de su salud"</p>
+          <p style="font:400 14px/1.4 var(--font-body);color:rgba(255,255,255,0.6);margin-top:8px">Cuidamos a quien más quieres.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1BnyyGabRZ/" target="_blank" rel="noopener" aria-label="Facebook" data-od-id="footer-facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/mauriciodlunav" target="_blank" rel="noopener" aria-label="Instagram" data-od-id="footer-instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Enlaces rápidos</h4>
+          <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contacto directo</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/5215540036237" target="_blank" rel="noopener">WhatsApp: 5540036237</a>
+            <a href="mailto:mdluna88@gmail.com">mdluna88@gmail.com</a>
+          </div>
+          <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="footer-wa" style="margin-top:16px;display:inline-flex" data-od-id="footer-wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Contáctanos
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Servicios de Luna. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+     WHATSAPP FLOTANTE
+     ============================================================ -->
+  <a href="https://wa.me/5215540036237?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20de%20Servicios%20de%20Luna.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp" data-od-id="wa-float">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+  <script>
+    (function() {
+      // ---- Header scroll ----
+      var header = document.getElementById('header');
+      window.addEventListener('scroll', function() {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      }, { passive: true });
+
+      // ---- Mobile menu ----
+      var toggle = document.getElementById('menuToggle');
+      var menu = document.getElementById('mobileMenu');
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('open');
+        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          toggle.classList.remove('active');
+          menu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ---- Scroll reveal ----
+      var revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(function(el) { observer.observe(el); });
+      } else {
+        revealElements.forEach(function(el) { el.classList.add('visible'); });
+      }
+
+      // ---- Accordion FAQ ----
+      var faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function(item) {
+        var btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', function() {
+          var isOpen = item.classList.contains('open');
+          faqItems.forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded', 'false'); });
+          if (!isOpen) {
+            item.classList.add('open');
+            item.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // ---- Form validation & submission ----
+      var form = document.getElementById('contactForm');
+      var successDiv = document.getElementById('formSuccess');
+
+      function showError(id) {
+        document.getElementById(id).classList.add('show');
+      }
+      function hideErrors() {
+        document.querySelectorAll('.form-error').forEach(function(el) { el.classList.remove('show'); });
+      }
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        hideErrors();
+        var valid = true;
+
+        var nombre = document.getElementById('nombre').value.trim();
+        if (!nombre) { showError('error-nombre'); valid = false; }
+
+        var email = document.getElementById('email').value.trim();
+        if (!email || !isValidEmail(email)) { showError('error-email'); valid = false; }
+
+        var telefono = document.getElementById('telefono').value.trim();
+        if (!telefono) { showError('error-telefono'); valid = false; }
+
+        var servicio = document.getElementById('servicio').value;
+        if (!servicio) { showError('error-servicio'); valid = false; }
+
+        if (!valid) return;
+
+        var mensaje = document.getElementById('mensaje').value.trim();
+        var waText = 'Hola, vengo de la p%C3%A1gina web de Servicios de Luna. Me interesa el servicio de ' +
+          encodeURIComponent(servicio) + '. Mi nombre es ' + encodeURIComponent(nombre) +
+          (mensaje ? '. Mensaje: ' + encodeURIComponent(mensaje) : '');
+
+        form.style.display = 'none';
+        successDiv.classList.add('show');
+
+        setTimeout(function() {
+          window.open('https://wa.me/5215540036237?text=' + waText, '_blank');
+        }, 1200);
+      });
+
+    })();
+  </script>
+</body>
+</html>
